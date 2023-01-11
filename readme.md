@@ -8,7 +8,7 @@ If you find this code useful for your research, please cite the following:
   year = {2022},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/gordicaleksa/pytorch-neural-style-transfer}},
+  howpublished = {\url{https://github.com/PeinuanQin/pytorch-image-style-transfer}},
 }
 ```
 
