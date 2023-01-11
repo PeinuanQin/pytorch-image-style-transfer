@@ -24,7 +24,7 @@ The algorithm transfers style from one input image (the style image) onto anothe
 
 <p align="center">
 <img src="data/content_images/golden_gate.jpg" width="570"/>
-<img src="data/output_images/golden_gate.jpg_vg_houses.jpg_0999..jpg" width="570"/>
+<img src="data/output_images/golden_gate_vg_houses/0900.jpg" width="570"/>
 </p>
 
 ### Why use our repo?
@@ -36,9 +36,9 @@ Transfering style gives beautiful artistic results:
 
 <p align="center">
 <img src="data/style_images/vg_houses.jpg" height="202px">
-<img src="data/output_images/golden_gate.jpg_vg_houses.jpg_0999..jpg" width="270px">
+<img src="data/output_images/golden_gate_vg_houses/0900.jpg" width="270px">
 <img src="data/style_images/vg_starry_night.jpg" width="320px">
-<img src="data/output_images/golden_gate.jpg_vg_starry_night.jpg_0900..jpg" width="270px">
+<img src="data/output_images/golden_gate_vg_starry_night/0900.jpg" width="270px">
 </p>
 
 ### Content/Style tradeoff

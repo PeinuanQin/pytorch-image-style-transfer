@@ -292,17 +292,17 @@ def save_img_and_show(args, optim_img, iter, max_iter, display=False):
     if (iter==max_iter-1) or (iter % args.saving_freq == 0):
         number_fill_length, expansion = args.img_format
         content_name, style_name = args.content_img_name, args.style_img_name
-        save_name = f"{content_name}_{style_name}_{str(iter).zfill(number_fill_length)}.{expansion}"
+        save_dir_name = f"{content_name.split('.')[0]}_{style_name.split('.')[0]}"
 
         dump_img = np.copy(optim_img)
         # add mean value in each channel of the image
         dump_img += np.array(IMAGENET_MEAN_255).reshape((1, 1, 3))
         dump_img = np.clip(dump_img, 0, 255).astype('uint8')
 
-        save_dir = os.path.join(args.data_root, args.output_dir_name)
+        save_dir = os.path.join(args.data_root, args.output_dir_name, save_dir_name)
         if not os.path.exists(save_dir):
             os.makedirs(save_dir)
-        save_path = os.path.join(save_dir, save_name)
+        save_path = os.path.join(save_dir, f"{str(iter).zfill(number_fill_length)}{expansion}")
         # reverse the numpy image r,g,b channel to b,g,r so that we
         # can use opencv to imwrite
         cv2.imwrite(save_path, dump_img[:,:, ::-1])
